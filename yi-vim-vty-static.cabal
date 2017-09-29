@@ -1,0 +1,44 @@
+-- This file has been generated from package.yaml by hpack version 0.17.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           yi-vim-vty-static
+version:        0.16.0
+category:       Yi
+homepage:       https://github.com/yi-editor/yi#readme
+bug-reports:    https://github.com/yi-editor/yi/issues
+maintainer:     Yi developers <yi-devel@googlegroups.com>
+license:        GPL-2
+build-type:     Simple
+cabal-version:  >= 1.10
+
+source-repository head
+  type: git
+  location: https://github.com/yi-editor/yi
+
+executable yi
+  main-is: Main.hs
+  hs-source-dirs:
+      ./.
+  ghc-options: -ferror-spans -freverse-errors -Wall -threaded
+  build-depends:
+      base >= 4.8 && < 5
+    , containers
+    , dynamic-state
+    , microlens-platform
+    , mtl
+    , oo-prototypes
+    , pointedlist
+    , yi-core
+    , yi-frontend-vty
+    , yi-keymap-vim
+    , yi-language
+    , yi-misc-modes
+    , yi-mode-haskell
+    , yi-rope
+  other-modules:
+      Config
+      KeymapSet
+      UIConfig
+      Utils
+  default-language: Haskell2010

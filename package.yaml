@@ -1,0 +1,29 @@
+name: yi-vim-vty-static
+version: 0.16.0
+license: GPL-2
+maintainer: Yi developers <yi-devel@googlegroups.com>
+github: yi-editor/yi
+category: Yi
+
+ghc-options: -ferror-spans -freverse-errors -Wall -threaded
+
+dependencies:
+  - base >= 4.8 && < 5
+  - containers
+  - dynamic-state
+  - microlens-platform
+  - mtl
+  - oo-prototypes
+  - pointedlist
+  - yi-core
+  - yi-frontend-vty
+  - yi-keymap-vim
+  - yi-language
+  - yi-misc-modes
+  - yi-mode-haskell
+  - yi-rope
+
+executables:
+  yi:
+    main: Main.hs
+    source-dirs: .
